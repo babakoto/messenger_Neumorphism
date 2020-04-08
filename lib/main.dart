@@ -51,7 +51,7 @@ class _HomeState extends State<Home> {
           child: Column(
             children: <Widget>[
               Expanded(
-                flex: 2,
+                flex: 3,
                 child: Container(
                   color: background,
                   child: Row(
@@ -99,6 +99,7 @@ class _HomeState extends State<Home> {
                   ),
                 ),
               ),
+              //------- Search ---------------------//
               Expanded(
                 flex: 1,
                 child: Padding(
@@ -121,7 +122,7 @@ class _HomeState extends State<Home> {
                             ),
                             border: InputBorder.none,
                             contentPadding:
-                                EdgeInsets.symmetric(vertical:20, horizontal: 20)),
+                                EdgeInsets.symmetric(vertical:10, horizontal: 20)),
                       ),
                     ),
                     color: primary,
@@ -131,7 +132,7 @@ class _HomeState extends State<Home> {
                 ),
               ),
               Expanded(
-                flex: 2,
+                flex: 3,
                 child: Padding(
                   padding: const EdgeInsets.only(top: 5.0),
                   child: Container(
@@ -143,7 +144,7 @@ class _HomeState extends State<Home> {
                       children: <Widget>[
                         Story(
                           photo: ADD,
-                          label: "Your Story",
+                          label: "Add Story",
                         ),
                         Story(
                           photo: STORY1,
@@ -171,7 +172,7 @@ class _HomeState extends State<Home> {
                 ),
               ),
               Expanded(
-                flex: 4,
+                flex: 7,
                 child: Padding(
                   padding: const EdgeInsets.only(top: 8.0),
                   child: Container(

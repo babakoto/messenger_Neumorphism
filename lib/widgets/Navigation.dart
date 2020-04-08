@@ -29,11 +29,11 @@ class _NavigationState extends State<Navigation> {
     return InkWell(
       onTap: widget.onTap,
       child: Padding(
-        padding: const EdgeInsets.only(top:15.0,left: 15),
+        padding: const EdgeInsets.only(top:10.0,left: 15,bottom: 10),
         child: Column(
           children: <Widget>[
             Expanded(
-              flex: 2,
+              flex: 3,
               child: ClayContainer(
                 emboss: widget.selected,
                 color: primary,
@@ -43,17 +43,10 @@ class _NavigationState extends State<Navigation> {
                 child: Icon(
                   widget.icon,
                   color: Colors.white,
-                  size: 40,
+                  size: width*0.1,
                 ),
               ),
             ),
-            Expanded(
-              flex: 2,
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(widget.label),
-              ),
-            )
             //Icon(Icons.email,color: Colors.white,size: 40,)
           ],
         ),

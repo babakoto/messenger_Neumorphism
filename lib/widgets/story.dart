@@ -17,19 +17,20 @@ class Story extends StatefulWidget {
 class _StoryState extends State<Story> {
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height =MediaQuery.of(context).size.height;
     return Column(
       children: <Widget>[
         Expanded(
           flex: 2,
           child: Padding(
-            padding: const EdgeInsets.all(5.0),
+            padding: const EdgeInsets.all(8),
             child: Container(
-              width: 60,
-              height: 60,
+              width: width*0.2,
+              height: width*0.2,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30),
-                  border:
-                  Border.all(color: Colors.white, width: 2),
+                  borderRadius: BorderRadius.circular(50),
+                  border: Border.all(color: Colors.white, width: 2),
                   image: DecorationImage(
                       image: AssetImage(widget.photo),
                       fit: BoxFit.cover)),
