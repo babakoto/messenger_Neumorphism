@@ -8,6 +8,7 @@ const CEDRIC = "images/cedric.jpg";
 const LANDRY = "images/landry.jpg";
 const TSIORY = "images/tsiory.jpg";
 const DIDA = "images/dida.jpg";
+const ADD = "images/plus.png";
 
 
 const STORY1 = "images/story1.jpg";

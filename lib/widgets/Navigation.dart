@@ -21,8 +21,11 @@ class Navigation extends StatefulWidget {
 }
 
 class _NavigationState extends State<Navigation> {
+
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
     return InkWell(
       onTap: widget.onTap,
       child: Padding(
@@ -34,8 +37,8 @@ class _NavigationState extends State<Navigation> {
               child: ClayContainer(
                 emboss: widget.selected,
                 color: primary,
-                height: 50,
-                width: 50,
+                height: width*0.2,
+                width: width*0.2,
                 borderRadius: 10,
                 child: Icon(
                   widget.icon,
@@ -45,7 +48,7 @@ class _NavigationState extends State<Navigation> {
               ),
             ),
             Expanded(
-              flex: 1,
+              flex: 2,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(widget.label),

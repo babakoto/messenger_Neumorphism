@@ -1,4 +1,5 @@
 import 'package:clay_containers/clay_containers.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:messenger_neumorphism/constants.dart';
@@ -18,13 +19,10 @@ class _StoryState extends State<Story> {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: ClayContainer(
-            height: 65,
-            width: 65,
-            borderRadius: 50,
-            color: primary,
+        Expanded(
+          flex: 2,
+          child: Padding(
+            padding: const EdgeInsets.all(5.0),
             child: Container(
               width: 60,
               height: 60,
@@ -38,9 +36,11 @@ class _StoryState extends State<Story> {
             ),
           ),
         ),
-        Text(
-          widget.label,
-          style: GoogleFonts.roboto(color: secondary),
+        Expanded(
+          child: Text(
+            widget.label,
+            style: GoogleFonts.roboto(color: secondary),
+          ),
         )
       ],
     );
